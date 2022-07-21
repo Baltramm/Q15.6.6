@@ -21,7 +21,8 @@ namespace Q15._6._6
 
         static string[] GetAllStudents(Classroom[] classes)
         {
-            // ???
+            var students = classes.SelectMany(s => s.Students).ToArray();
+            return students;
         }
 
         public class Classroom
